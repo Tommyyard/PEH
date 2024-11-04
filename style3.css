@@ -1,0 +1,349 @@
+*, html, body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.bg-utama {
+    background: black;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    max-height: 50px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: sticky; */
+    /* top: 0; */
+    z-index: 1;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50pc;
+    border: 1px solid white;
+    margin-left: 10px;
+}
+
+#wm {
+    color: white;
+    flex: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 27px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1rem;
+}
+
+li {
+    margin-right: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    width: max-content;
+    height: max-content;
+    transition: all 0.3s;
+    padding: 1rem;
+}
+
+a:hover::before {
+    content: "";
+    background: rgb(253, 38, 38);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 100ms;
+}
+
+a::before {
+    width: 0;
+}
+
+a:hover {
+    width: 0;
+}
+
+a:hover {
+    background: rgba(255, 126, 126, 0.5);
+}
+
+/* layer 1 */
+
+.layer1 {
+    height: calc(100vh - 50px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    background: url(foto/photo_6120404160479348541_y.jpg);
+    background-size: cover;
+}
+
+
+/* login container */
+
+.container {
+    backdrop-filter: blur(15px);
+    width: 350px;
+    height: fit-content; /*enaknya fit content atau apa ya?*/
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgb(255, 255, 255);
+    display: block;
+}
+
+.container h1, .feedback-container h1 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 36px;
+}
+
+.container p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.text input[type="text"] {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px auto;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.password {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.password input[type="password"] {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px auto;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+input::placeholder  {
+    color: rgb(255, 255, 255);
+}
+
+form span {
+    margin-bottom: 10px;
+}
+
+form button {
+    width: 90%;
+    height: 40px;
+    color: white;
+    margin-bottom: 20px;
+    padding: 10px auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background: transparent;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s ease;
+}
+
+form button:hover {
+    box-shadow: 1px 1px 5px rgb(255, 99, 99);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    opacity: .7;
+    transform: scale(.95);
+}
+
+.container span a {
+    color: rgb(255, 255, 255);
+}
+
+.container span a:hover {
+    color: white;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;   
+}
+
+input[type="text"]:focus::placeholder, input[type="password"]:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+input[type="text"]:focus + label, input[type="password"]:focus + label {
+    top: -20px;
+    font-size: 12px;
+    color: #ffffff;
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+#username, #email, #password {
+    color: white;
+}
+
+.menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    align-items: end;
+    background: #0000;
+    margin-right: 10px;
+    border: none;
+    display: none;
+}
+
+.menu-content {
+    display: none; /* Sembunyikan menu secara default */
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    width: 100%; /* Lebar menu */
+    background: black;
+    position: fixed;
+}
+
+.menu-content.show {
+    display: block; /* Tampilkan menu saat di-toggle */
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-content  li {
+    border-bottom: 1pt solid white;
+}
+
+.menu-content li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    width: 100%;
+    height: 100%;
+}
+
+/* .menu-content li a:hover {
+    background-color: #f0f0f0;
+} */
+
+
+/* feedback container */
+.feedback-container {
+    backdrop-filter: blur(15px);
+    width: 350px;
+    height: fit-content; /*enaknya fit content atau apa ya?*/
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgb(255, 255, 255);
+    display: none;
+}
+
+.feedback-container textarea {
+    margin-bottom: 20px;
+    overflow: hidden;
+    resize: none;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 7px;
+    width: calc(350px - 32px);
+    height: 100px;
+}
+
+@media (max-width: 485px) {
+    nav ul {
+        display: none;
+    }
+    
+    li {
+        margin-right: 0;
+    }
+
+    a {
+        padding: 7pt;
+        font-size: 9px;
+    }
+
+    .menu-container {
+        display: block;
+    }
+    
+    .menu-content  li {
+        height: fit-content;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* layer1 */
+    .layer1 {
+        background: url(foto/hp.jpg);
+        background-size: cover;
+    }
+}

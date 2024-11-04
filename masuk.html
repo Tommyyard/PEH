@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css" />
+</head>
+
+<body>
+    <div class="bg-utama">
+        <!-- header -->
+        <header>
+            <img src="foto/photo_6120404160479348566_y.jpg" alt="" id="logo" />
+            <h1 id="wm">PEH | WEBSITE</h1>
+            <nav>
+                <ul>
+                    <li><a href="halaman-1.html">Home</a></li>
+                    <li><a href="" id="feedb">Feedback</a></li>
+                </ul>
+                <button class="menu-icon" onclick="toggleMenu(event)">
+                    &#9776; <!-- Simbol hamburger -->
+                </button>
+            </nav>
+        </header>
+        <div class="menu-container">
+            <section class="menu-content" id="menuContent">
+                <ul>
+                    <li><a href="halaman-1.html">Home</a></li>
+                    <li><a href="" id="feedb">Feedback</a></li>
+                </ul>
+            </section>
+        </div>
+        <!--  -->
+
+        <!-- layer1 -->
+        <div class="layer1">
+            <!-- login container -->
+            <div class="container" id="daftar">
+                <h1>Log In</h1>
+                <p>Silakan masukkan username & password yang telah diberikan oleh admin</p>
+                <form id="login-form">
+                    <div class="text">
+                        <input type="text" id="username" placeholder="Username anda" />
+                    </div>
+
+                    <div class="text">
+                        <input type="text" id="email" placeholder="Email" />
+                    </div>
+
+                    <div class="password">
+                        <input type="password" id="password" placeholder="Password" />
+                    </div>
+
+                    <button id="login-btn" onclick="">Kirim</button>
+                </form>
+            </div>
+            <!-- feedback -->
+            <div class="feedback-container" id="fb">
+                <h1>Kirim masukkan atau kritikan!
+                </h1>
+                    <form action="">
+
+                        <div class="text">
+                            <input type="text" id="username" placeholder="Nama" />
+                        </div>
+
+                        <div class="text">
+                            <input type="text" id="username" placeholder="Email" />
+                        </div>
+                        
+                        <textarea name="" id="textarea"></textarea>
+                        <button id="send" onclick="">Kirim</button>
+                    </form>
+            </div>
+            <!--  -->
+        </div>
+        <!--  -->
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
