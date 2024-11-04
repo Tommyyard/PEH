@@ -8,7 +8,7 @@ window.onload = function() {
   alert(`Website ini masih dalam tahap pengembangan,
     jadi masih banyak fitur yang belum bisa dijalankan!`);
     localStorage.setItem("visited", "true");
-}
+};
 
 tombol1.addEventListener("click", function () {
   window.location.href = "masuk.html";
