@@ -3,11 +3,10 @@ const tombol2 = document.getElementById("btn2");
 const fb = document.getElementById("feedb");
 
 window.onload = function() {
-  if(!
-     localStorage.getItem("visited")) {
-  alert(`Website ini masih dalam tahap pengembangan,
-    jadi masih banyak fitur yang belum bisa dijalankan!`);
-    localStorage.setItem("visited", "true");
+    if (!localStorage.getItem("visited")) {
+        alert("Mohon maaf dikarenakan website ini belum sepenuhnya selesai, jadi ada beberapa fitur yang belum bisa digunakan dengan baik!");
+        localStorage.setItem("visited", "true");
+    }
 };
 
 tombol1.addEventListener("click", function () {
