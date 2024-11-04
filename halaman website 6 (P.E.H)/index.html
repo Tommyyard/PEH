@@ -18,12 +18,22 @@
             <nav>
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="">Upload</a></li>
-                    <li><a href="">Menu</a></li>
                     <li><a href="">Feedback</a></li>
                 </ul>
+                
+                <button class="menu-icon" onclick="toggleMenu(event)">
+                    &#9776; <!-- Simbol hamburger -->
+                </button>
             </nav>
         </header>
+        <div class="menu-container">
+            <section class="menu-content" id="menuContent">
+                <ul>
+                    <li><a href="halaman-1.html">Home</a></li>
+                    <li><a href="">Feedback</a></li>
+                </ul>
+            </section>
+        </div>
         <!--  -->
 
         <!-- layer 1 -->
@@ -40,6 +50,7 @@
         </div>
         <!--  -->
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
